@@ -1,5 +1,8 @@
 # K-Means-Clustering
 
+
+![image](https://github.com/user-attachments/assets/1bf27c62-67a7-4e5a-9353-85db11a10806)
+
 <h3 align="left">Bitcoin Price Clustering Analysis</h3>
 This repository includes a Python script that applies K-means clustering to historical Bitcoin (BTC-USD) price data and displays the results. The analysis employs financial and economic approaches to detect price clusters, revealing insights into the structure of Bitcoin's price changes over time.
 
