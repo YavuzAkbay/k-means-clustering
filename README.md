@@ -1,28 +1,110 @@
-# K-Means-Clustering
+# 📊 Cryptocurrency Price Cluster Analysis
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0%2B-orange)
 
-![image](https://github.com/user-attachments/assets/1bf27c62-67a7-4e5a-9353-85db11a10806)
+A Python tool that analyzes cryptocurrency price levels using K-means clustering, identifying key price zones and standard deviation bands.
 
-<h3 align="left">Bitcoin Price Clustering Analysis</h3>
-This repository includes a Python script that applies K-means clustering to historical Bitcoin (BTC-USD) price data and displays the results. The analysis employs financial and economic approaches to detect price clusters, revealing insights into the structure of Bitcoin's price changes over time.
+## 🚀 Features
 
-<h3 align="left">Overview</h3>
-In this analysis, we use the K-means clustering technique to divide Bitcoin prices into various clusters based on their historical values. This method allows us to detect probable patterns and clusters in the price data, which can help us understand the volatility and behaviour of Bitcoin values.
+- 📈 Downloads historical cryptocurrency data via `yfinance`
+- 🔍 Implements K-means clustering for price level analysis
+- 📊 Visualizes price clusters with standard deviation bands
+- 📉 Supports logarithmic price scaling
+- ⚙️ Configurable clustering parameters
 
-<h3 align="left">Key Features</h3>
-*K-means Clustering: Categorizes Bitcoin prices into k clusters.
-*Center Methods: Uses K-means cluster centers and provides options for different central tendency measures (mean or median).
-*Standard Deviation Bands: Optionally displays standard deviation bands around cluster centers to visualize variability.
-*Logarithmic Price Scale: Applies a logarithmic scale to the price axis for better visualization of price distributions.
+## 📋 Prerequisites
 
-<h3 align="left">Dependencies</h3>
-*yfinance for downloading historical price data
-*numpy for numerical operations
-*pandas for data manipulation
-*sklearn for K-means clustering
-*matplotlib for plotting
+Before running the script, ensure you have Python 3.7+ installed on your system.
 
-<h3 align="left">Analysis</h3>
-The script clusters comparable price moves to give a detailed perspective of Bitcoin's price behaviour. The K-means clustering method aids in discovering different regimes or clusters within historical price data, which may then be used for additional financial analysis or trading methods.
+## 🔧 Installation
 
-By visualising the clusters and their standard deviations, you can see how Bitcoin values fluctuate around several central locations, providing insight into price volatility and trend behaviour.
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/crypto-cluster-analysis.git
+cd crypto-cluster-analysis
+```
+
+2. Install required packages
+```bash
+pip install -r requirements.txt
+```
+
+## 💻 Usage
+
+1. Basic usage with default parameters:
+```python
+from crypto_clustering import CryptoClusterAnalysis
+
+analyzer = CryptoClusterAnalysis()
+analyzer.load_data().fit().plot_results()
+```
+
+2. Custom analysis:
+```python
+analyzer = CryptoClusterAnalysis(
+    ticker="ETH-USD",
+    k=5,  # number of clusters
+    cent_meth="K means",
+    train_n=365,  # training period
+    plot_band=True
+)
+analyzer.load_data(start="2020-01-01").fit().plot_results()
+```
+
+## ⚙️ Configuration Options
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| ticker | Cryptocurrency symbol | "BTC-USD" |
+| k | Number of clusters | 3 |
+| cent_meth | Clustering method | "K means" |
+| train_n | Training period (days) | 252 |
+| plot_band | Show SD bands | True |
+
+## 📊 Example Output
+
+The script generates a visualization showing:
+- Historical price data on logarithmic scale
+- Cluster center lines
+- Standard deviation bands for each cluster
+- Customizable date range and parameters
+
+## 🔍 Code Structure
+
+```
+crypto-cluster-analysis/
+│
+├── crypto_clustering.py   # Main script
+├── requirements.txt      # Dependencies
+├── README.md            # Documentation
+└── .gitignore          # Git ignore rules
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- `yfinance` for cryptocurrency data access
+- `scikit-learn` for K-means clustering implementation
+- Matplotlib for visualization capabilities
+
+## 📧 Contact
+
+Your Name - [akbay.yavuz@gmail.com](mailto:akbay.yavuz@gmail.com)
+
+Project Link: [https://github.com/YavuzAkbay/K-Means-Clustering](https://github.com/YavuzAkbay/K-Means-Clustering)
+
+---
+⭐️ If you found this project helpful, please consider giving it a star!
