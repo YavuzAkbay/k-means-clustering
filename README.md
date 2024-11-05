@@ -22,7 +22,7 @@ Before running the script, ensure you have Python 3.7+ installed on your system.
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/crypto-cluster-analysis.git
+git clone https://github.com/YavuzAkbay/k-means-clustering.git
 cd crypto-cluster-analysis
 ```
 
