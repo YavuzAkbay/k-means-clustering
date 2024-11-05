@@ -23,7 +23,7 @@ Before running the script, ensure you have Python 3.7+ installed on your system.
 1. Clone the repository
 ```bash
 git clone https://github.com/YavuzAkbay/k-means-clustering.git
-cd crypto-cluster-analysis
+cd k-means-clustering
 ```
 
 2. Install required packages
@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 1. Basic usage with default parameters:
 ```python
-from crypto_clustering import CryptoClusterAnalysis
+from k-means-clustering import CryptoClusterAnalysis
 
 analyzer = CryptoClusterAnalysis()
 analyzer.load_data().fit().plot_results()
